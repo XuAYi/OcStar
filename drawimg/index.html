@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>画布函数 | OcStarDic</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="简单高效，伪编程特性的词库引擎">
+    
+    <link rel="preload" href="/OcStar/assets/css/0.styles.774ed4f6.css" as="style"><link rel="preload" href="/OcStar/assets/js/app.f089a547.js" as="script"><link rel="preload" href="/OcStar/assets/js/2.56b203c4.js" as="script"><link rel="preload" href="/OcStar/assets/js/1.aca73b7b.js" as="script"><link rel="preload" href="/OcStar/assets/js/25.ff1303a8.js" as="script"><link rel="prefetch" href="/OcStar/assets/js/10.5a290036.js"><link rel="prefetch" href="/OcStar/assets/js/11.3e761738.js"><link rel="prefetch" href="/OcStar/assets/js/12.2340b856.js"><link rel="prefetch" href="/OcStar/assets/js/13.facfcd3d.js"><link rel="prefetch" href="/OcStar/assets/js/14.8cbc013a.js"><link rel="prefetch" href="/OcStar/assets/js/15.33db6b39.js"><link rel="prefetch" href="/OcStar/assets/js/16.47940fc2.js"><link rel="prefetch" href="/OcStar/assets/js/17.ef4d8cc7.js"><link rel="prefetch" href="/OcStar/assets/js/18.3256f17f.js"><link rel="prefetch" href="/OcStar/assets/js/19.a45744ea.js"><link rel="prefetch" href="/OcStar/assets/js/20.c22d9498.js"><link rel="prefetch" href="/OcStar/assets/js/21.30f352ed.js"><link rel="prefetch" href="/OcStar/assets/js/22.5ba155b7.js"><link rel="prefetch" href="/OcStar/assets/js/23.32f843d0.js"><link rel="prefetch" href="/OcStar/assets/js/24.493f4126.js"><link rel="prefetch" href="/OcStar/assets/js/26.00f909d9.js"><link rel="prefetch" href="/OcStar/assets/js/27.9c04a94d.js"><link rel="prefetch" href="/OcStar/assets/js/28.7067870a.js"><link rel="prefetch" href="/OcStar/assets/js/29.9bb1187b.js"><link rel="prefetch" href="/OcStar/assets/js/3.c33b3aaa.js"><link rel="prefetch" href="/OcStar/assets/js/30.ec6cb849.js"><link rel="prefetch" href="/OcStar/assets/js/31.762f4df1.js"><link rel="prefetch" href="/OcStar/assets/js/32.69b832ae.js"><link rel="prefetch" href="/OcStar/assets/js/33.a94ef9af.js"><link rel="prefetch" href="/OcStar/assets/js/34.38d4ab71.js"><link rel="prefetch" href="/OcStar/assets/js/35.0f4a405f.js"><link rel="prefetch" href="/OcStar/assets/js/36.272181a9.js"><link rel="prefetch" href="/OcStar/assets/js/37.bf02b0b9.js"><link rel="prefetch" href="/OcStar/assets/js/38.a40df493.js"><link rel="prefetch" href="/OcStar/assets/js/39.f82808c2.js"><link rel="prefetch" href="/OcStar/assets/js/4.0e092980.js"><link rel="prefetch" href="/OcStar/assets/js/40.c987821d.js"><link rel="prefetch" href="/OcStar/assets/js/41.47b3abce.js"><link rel="prefetch" href="/OcStar/assets/js/42.f3e54ea0.js"><link rel="prefetch" href="/OcStar/assets/js/43.719d8049.js"><link rel="prefetch" href="/OcStar/assets/js/44.cc806395.js"><link rel="prefetch" href="/OcStar/assets/js/45.354bb533.js"><link rel="prefetch" href="/OcStar/assets/js/46.a0e94547.js"><link rel="prefetch" href="/OcStar/assets/js/5.f0d08e09.js"><link rel="prefetch" href="/OcStar/assets/js/6.d9cff0ce.js"><link rel="prefetch" href="/OcStar/assets/js/7.a21ffd1b.js"><link rel="prefetch" href="/OcStar/assets/js/vendors~docsearch.271bc088.js">
+    <link rel="stylesheet" href="/OcStar/assets/css/0.styles.774ed4f6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/OcStar/" class="home-link router-link-active"><!----> <span class="site-name">OcStarDic</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/OcStar/" class="nav-link">
+  简介
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">快速入门</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">快速入门</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/" class="nav-link">
+  插件安装
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/create/" class="nav-link">
+  创建词库
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/type/" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/message/" class="nav-link">
+  认识消息方法
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/var/" class="nav-link">
+  变量赋值与取值
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ysvar/" class="nav-link">
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ifelse/" class="nav-link">
+  条件语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/for/" class="nav-link">
+  循环语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/try/" class="nav-link">
+  异常处理语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/method/" class="nav-link">
+  定义函数及调用
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/internal/" class="nav-link">
+  内部函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/class/" class="nav-link">
+  类与文件引用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">函数大全</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">函数大全</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/method/" class="nav-link">
+  api访问函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/properties/" class="nav-link">
+  键值文件函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/file/" class="nav-link">
+  txt文件读取写入
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/other/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">画图函数</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">画图函数</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  画布函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/paint/" class="nav-link">
+  画笔函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/matrix/" class="nav-link">
+  矩阵函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/path/" class="nav-link">
+  路径函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/pic/" class="nav-link">
+  快照跟路径样式
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/rect/" class="nav-link">
+  矩形对象
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/gdhs/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><a href="/OcStar/sec/" class="nav-link">
+  Sec框架函数
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/OcStar/" class="nav-link">
+  简介
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">快速入门</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">快速入门</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/" class="nav-link">
+  插件安装
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/create/" class="nav-link">
+  创建词库
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/type/" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/message/" class="nav-link">
+  认识消息方法
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/var/" class="nav-link">
+  变量赋值与取值
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ysvar/" class="nav-link">
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ifelse/" class="nav-link">
+  条件语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/for/" class="nav-link">
+  循环语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/try/" class="nav-link">
+  异常处理语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/method/" class="nav-link">
+  定义函数及调用
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/internal/" class="nav-link">
+  内部函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/class/" class="nav-link">
+  类与文件引用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">函数大全</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">函数大全</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/method/" class="nav-link">
+  api访问函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/properties/" class="nav-link">
+  键值文件函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/file/" class="nav-link">
+  txt文件读取写入
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/other/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">画图函数</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">画图函数</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  画布函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/paint/" class="nav-link">
+  画笔函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/matrix/" class="nav-link">
+  矩阵函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/path/" class="nav-link">
+  路径函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/pic/" class="nav-link">
+  快照跟路径样式
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/rect/" class="nav-link">
+  矩形对象
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/gdhs/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><a href="/OcStar/sec/" class="nav-link">
+  Sec框架函数
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#画布函数-手机参考canvas">画布函数，手机参考canvas</a><ul><li><a href="#保存图层">保存图层</a></li><li><a href="#保存到本地">保存到本地</a></li><li><a href="#恢复">恢复</a></li><li><a href="#画背景颜色">画背景颜色</a></li><li><a href="#插图">插图</a></li><li><a href="#插入文字">插入文字</a></li><li><a href="#画线">画线</a></li><li><a href="#画矩形">画矩形</a></li><li><a href="#画圆角矩形">画圆角矩形</a></li><li><a href="#画圆形">画圆形</a></li><li><a href="#画弧形">画弧形</a></li><li><a href="#画点">画点</a></li><li><a href="#画椭圆">画椭圆</a></li><li><a href="#设置矩阵">设置矩阵</a></li><li><a href="#画路径">画路径</a></li><li><a href="#画文本路径">画文本路径</a></li><li><a href="#快照">快照</a></li><li><a href="#画多圆角矩形">画多圆角矩形</a></li><li><a href="#顶点操作">顶点操作</a></li><li><a href="#获取宽度">获取宽度</a></li><li><a href="#获取高度">获取高度</a></li><li><a href="#clip矩形">clip矩形</a></li><li><a href="#clip路径">clip路径</a></li><li><a href="#clipout路径">clipout路径</a></li><li><a href="#clipout矩形">clipout矩形</a></li><li><a href="#旋转">旋转</a></li><li><a href="#缩放">缩放</a></li><li><a href="#平移">平移</a></li><li><a href="#扭曲">扭曲</a></li><li><a href="#判断相交">判断相交</a></li><li><a href="#合并">合并</a></li><li><a href="#新建图层">新建图层</a></li><li><a href="#切换图层">切换图层</a></li><li><a href="#获取图层数量">获取图层数量</a></li><li><a href="#新建图层通道">新建图层通道</a></li><li><a href="#图像扭曲">图像扭曲</a></li><li><a href="#设置像素密度">设置像素密度</a></li><li><a href="#获取像素密度">获取像素密度</a></li><li><a href="#获取最大高度">获取最大高度</a></li><li><a href="#获取最大宽度">获取最大宽度</a></li><li><a href="#获取像素判断不透明密度">获取像素判断不透明密度</a></li><li><a href="#判断硬件加速">判断硬件加速</a></li></ul></li></ul></div><p></p> <h2 id="画布函数-手机参考canvas"><a href="#画布函数-手机参考canvas" class="header-anchor">#</a> 画布函数，手机参考canvas</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>new 画布(宽,高)
+
+new 画布(宽,高,颜色对象)
+
+new 画布(宽,高,16进制颜色代码)
+
+new 画布(宽,高,配置对象)
+
+new 画布(宽,高,颜色,颜色对象)
+
+new 画布(宽,高,16进制颜色代码,颜色对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="保存图层"><a href="#保存图层" class="header-anchor">#</a> 保存图层</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.保存()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="保存到本地"><a href="#保存到本地" class="header-anchor">#</a> 保存到本地</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.保存(保存到本地的路径)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="恢复"><a href="#恢复" class="header-anchor">#</a> 恢复</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.恢复()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="画背景颜色"><a href="#画背景颜色" class="header-anchor">#</a> 画背景颜色</h3> <details class="custom-block details"><summary>点击查看代码</summary> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.颜色(16进制颜色代码)
+
+画布对象.颜色(16进制颜色代码,PorterDuff.Mode颜色策略对象或名字)
+
+画布对象.颜色(颜色对象)
+
+画布对象.颜色(颜色对象,PorterDuff.Mode颜色策略对象或名字)
+
+PorterDuff.Mode颜色策略对象名字
+CLEAR
+SRC
+DST
+SRC_OVER
+DST_OVER
+SRC_IN
+DST_IN
+SRC_OUT
+DST_OUT
+SRC_ATOP
+DST_ATOP
+XOR
+DARKEN
+LIGHTEN
+MULTIPLY
+SCREEN
+ADD
+OVERLAY
+
+
+
+画布对象.颜色(a,r,g,b)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div></details> <hr> <h3 id="插图"><a href="#插图" class="header-anchor">#</a> 插图</h3> <details class="custom-block details"><summary>点击查看代码</summary> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.插图(画布对象或路径,矩阵)
+
+画布对象.插图(画布对象或路径,矩阵,画笔对象)
+
+画布对象.插图(画布对象或路径,左,上)
+
+画布对象.插图(画布对象或路径,左,上,画笔对象)
+
+画布对象.插图(画布对象或路径,左,上,宽,高)
+
+画布对象.插图(画布对象或路径,左,上,宽,高,画笔对象)
+
+画布对象.插图(画布对象或路径,左,上,缩放比例)
+
+画布对象.插图(画布对象或路径,左,上,缩放比例,画笔对
+象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></details> <hr> <h3 id="插入文字"><a href="#插入文字" class="header-anchor">#</a> 插入文字</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.文字(x坐标,y坐标)
+
+画布对象.文字(x坐标,y坐标,画笔对象)
+
+画布对象.文字(起始位置,结束位置,x坐标,y坐标)
+
+画布对象.文字(起始位置,结束位置,x坐标,y坐标,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h3 id="画线"><a href="#画线" class="header-anchor">#</a> 画线</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.线(坐标数组)
+
+画布对象.线(坐标数组,画笔对象)
+
+画布对象.线(坐标数组,绘制前跳过的值数,数量)
+
+画布对象.线(坐标数组,绘制前跳过的值数,数量,画笔对象)
+
+画布对象.线(开始x坐标,开始y坐标,结束x坐标,结束y坐标)
+
+画布对象.线(开始x坐标,开始y坐标,结束x坐标,结束y坐标,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h3 id="画矩形"><a href="#画矩形" class="header-anchor">#</a> 画矩形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.矩形(左x坐标,上y坐标,右x坐标,下y坐标)
+
+画布对象.矩形(左x坐标,上y坐标,右x坐标,下y坐标,画笔对象)
+
+画布对象.矩形(矩形对象)
+
+画布对象.矩形(矩形对象,画笔对象)
+
+画布对象.矩形(矩形F对象)
+
+画布对象.矩形(矩形F对象,画笔对象)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><hr> <h3 id="画圆角矩形"><a href="#画圆角矩形" class="header-anchor">#</a> 画圆角矩形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.圆角矩形(左x坐标,上y坐标,右x坐标,下y坐标,x方向圆角大小,y方向圆角大小)
+
+画布对象.圆角矩形(画布对象,左x坐标,上y坐标,右x坐标,下y坐标,x方向圆角大小,y方向圆角大小,画笔对象)
+
+画布对象.圆角矩形(矩形对象,x方向圆角大小,y方向圆角大小,画笔对象)
+
+画布对象.圆角矩形(矩形对象,x方向圆角大小,y方向圆角大小)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h3 id="画圆形"><a href="#画圆形" class="header-anchor">#</a> 画圆形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.圆形(x坐标,y坐标,半径)
+
+画布对象.圆形(x坐标,y坐标,半径，画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="画弧形"><a href="#画弧形" class="header-anchor">#</a> 画弧形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.弧形(左x坐标,上y坐标,右x坐标,下y坐标,startAngle(角度),sweepAngle(角度),(布尔值)useCenter)
+
+画布对象.弧形(左x坐标,上y坐标,右x坐标,下y坐标,startAngle(角度),sweepAngle(角度),(布尔值)useCenter,画笔对象)
+
+画布对象.弧形(矩形对象,startAngle(角度),sweepAngle(角度),(布尔值)useCenter,画笔对象)
+
+画布对象.弧形(矩形对象,startAngle(角度),sweepAngle(角度),(布尔值)useCenter)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h3 id="画点"><a href="#画点" class="header-anchor">#</a> 画点</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.点(x坐标,y坐标)
+
+画布对象.点(x坐标,y坐标，画笔对象)
+
+画布对象.点(坐标数组)
+
+画布对象.点(坐标数组,画笔对象)
+
+画布对象.点(坐标数组,绘制前跳过的值数,数量)
+
+画布对象.点(坐标数组,绘制前跳过的值数,数量,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h3 id="画椭圆"><a href="#画椭圆" class="header-anchor">#</a> 画椭圆</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.椭圆(左x坐标,上y坐标,右x坐标,下y坐标)
+
+画布对象.椭圆(左x坐标,上y坐标,右x坐标,下y坐标,画笔对象)
+
+画布对象.椭圆(矩形对象)
+
+画布对象.椭圆(矩形F对象,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h3 id="设置矩阵"><a href="#设置矩阵" class="header-anchor">#</a> 设置矩阵</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.矩阵(矩阵对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="画路径"><a href="#画路径" class="header-anchor">#</a> 画路径</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.路径(路径对象)
+
+画布对象.路径(路径对象,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="画文本路径"><a href="#画文本路径" class="header-anchor">#</a> 画文本路径</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.文本路径(文本内容,路径对象,水平偏移,垂直偏移)
+
+画布对象.文本路径(文本内容,路径对象,水平偏移,垂直偏移,画笔对象$)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><hr> <h3 id="快照"><a href="#快照" class="header-anchor">#</a> 快照</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.快照(快照对象)
+
+画布对象.快照(快照对象,矩形对象)
+
+画布对象.快照(快照对象,矩形F对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><hr> <h3 id="画多圆角矩形"><a href="#画多圆角矩形" class="header-anchor">#</a> 画多圆角矩形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.多圆角矩形(外矩形F对象,外X圆角，外Y圆角,内矩形F对象,内X圆角,外Y圆角)
+
+画布对象.多圆角矩形(外矩形F对象,外X圆角，外Y圆角,内矩形F对象,内X圆角,外Y圆角,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="顶点操作"><a href="#顶点操作" class="header-anchor">#</a> 顶点操作</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.顶点(Canvas.VertexMode,vertexCount,verts,vertOffset,texs,texOffset,colors,colorOffset,indices,indexOffset,indexCount)
+
+画布对象.顶点(Canvas.VertexMode,vertexCount,verts,vertOffset,texs,texOffset,colors,colorOffset,indices,indexOffset,indexCount,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="获取宽度"><a href="#获取宽度" class="header-anchor">#</a> 获取宽度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取宽度()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取高度"><a href="#获取高度" class="header-anchor">#</a> 获取高度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取高度()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="clip矩形"><a href="#clip矩形" class="header-anchor">#</a> clip矩形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.clip矩形(矩形对象)
+
+画布对象.clip矩形(矩形对象,Region.Op对象或名字)
+
+画布对象.clip矩形(矩形F对象)
+
+画布对象.clip矩形(矩形F对象,Region.Op对象或名字)
+
+画布对象.clip矩形(左,上,右,下)
+
+画布对象.clip矩形(左,上,右,下,Region.Op对象或名字)
+
+op名字
+DIFFERENCE
+INTERSECT
+UNION
+XOR
+REVERSE_DIFFERENCE
+REPLACE
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><hr> <h3 id="clip路径"><a href="#clip路径" class="header-anchor">#</a> clip路径</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.clip路径(路径对象)
+
+画布对象.clip路径(路径对象,Region.Op对象或名字)
+
+op名字
+DIFFERENCE
+INTERSECT
+UNION
+XOR
+REVERSE_DIFFERENCE
+REPLACE
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h3 id="clipout路径"><a href="#clipout路径" class="header-anchor">#</a> clipout路径</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+画布对象.clipout路径(路径对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><hr> <h3 id="clipout矩形"><a href="#clipout矩形" class="header-anchor">#</a> clipout矩形</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.clipout矩形(矩形对象)
+
+画布对象.clipout矩形(矩形F对象)
+
+画布对象.clipout矩形(左,上,右,下)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><hr> <h3 id="旋转"><a href="#旋转" class="header-anchor">#</a> 旋转</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.旋转(度数)
+
+画布对象.旋转(度数,x,y)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="缩放"><a href="#缩放" class="header-anchor">#</a> 缩放</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.缩放(sx,sy)
+
+画布对象.缩放(sx,sy,px,py)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="平移"><a href="#平移" class="header-anchor">#</a> 平移</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.平移(px,py)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="扭曲"><a href="#扭曲" class="header-anchor">#</a> 扭曲</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+
+画布对象.扭曲(sx,xy)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="判断相交"><a href="#判断相交" class="header-anchor">#</a> 判断相交</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.判断相交(左,上,右,下)
+
+画布对象.判断相交(左,上,右,下,Canvas.EdgeType)
+
+画布对象.判断相交(矩形F对象)
+
+画布对象.判断相交(矩形F对象,Canvas.EdgeType)
+
+画布对象.判断相交(路径对象)
+
+画布对象.判断相交(路径对象,Canvas.EdgeType)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h3 id="合并"><a href="#合并" class="header-anchor">#</a> 合并</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.合并(矩阵对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="新建图层"><a href="#新建图层" class="header-anchor">#</a> 新建图层</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.新建图层(矩形对象)
+
+画布对象.新建图层(矩形对象,画笔对象)
+
+画布对象.新建图层(矩形对象,savaFlag)
+
+画布对象.新建图层(矩形对象,画笔对象,savaFlag)
+
+画布对象.新建图层(左,上,右,下)
+
+画布对象.新建图层(左,上,右,下,画笔对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h3 id="切换图层"><a href="#切换图层" class="header-anchor">#</a> 切换图层</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.切换图层(层数)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取图层数量"><a href="#获取图层数量" class="header-anchor">#</a> 获取图层数量</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取图层数量()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="新建图层通道"><a href="#新建图层通道" class="header-anchor">#</a> 新建图层通道</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.新建图层通道(左,上,右,下,通道,SavaFlag)
+
+画布对象.新建图层通道(左,上,右,下,通道)
+
+画布对象.新建图层通道(矩形F对象,通道)
+
+画布对象.新建图层通道(矩形F对象,通道,SavaFlag)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h3 id="图像扭曲"><a href="#图像扭曲" class="header-anchor">#</a> 图像扭曲</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.图像扭曲(画布对象,宽分几格,高分几格,float数组,控制数组元素进行扭曲,颜色数组,操作颜色数组元素,画笔函数)
+
+画布对象.图像扭曲(宽分几格,高分几格,float数组,控制数组元素进行扭曲,颜色数组,操作颜色数组元素)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h3 id="设置像素密度"><a href="#设置像素密度" class="header-anchor">#</a> 设置像素密度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.像素密度(密度)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取像素密度"><a href="#获取像素密度" class="header-anchor">#</a> 获取像素密度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取像素密度()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取最大高度"><a href="#获取最大高度" class="header-anchor">#</a> 获取最大高度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取最大高度()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取最大宽度"><a href="#获取最大宽度" class="header-anchor">#</a> 获取最大宽度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.获取最大宽度()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="获取像素判断不透明密度"><a href="#获取像素判断不透明密度" class="header-anchor">#</a> 获取像素判断不透明密度</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.判断不透明()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr> <h3 id="判断硬件加速"><a href="#判断硬件加速" class="header-anchor">#</a> 判断硬件加速</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>画布对象.判断硬件加速()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><hr></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/OcStar/drawimg/paint.html">
+        画笔函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/OcStar/assets/js/app.f089a547.js" defer></script><script src="/OcStar/assets/js/2.56b203c4.js" defer></script><script src="/OcStar/assets/js/1.aca73b7b.js" defer></script><script src="/OcStar/assets/js/25.ff1303a8.js" defer></script>
+  </body>
+</html>

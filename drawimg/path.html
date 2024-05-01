@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>路径函数 | OcStarDic</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="简单高效，伪编程特性的词库引擎">
+    
+    <link rel="preload" href="/OcStar/assets/css/0.styles.774ed4f6.css" as="style"><link rel="preload" href="/OcStar/assets/js/app.f089a547.js" as="script"><link rel="preload" href="/OcStar/assets/js/2.56b203c4.js" as="script"><link rel="preload" href="/OcStar/assets/js/1.aca73b7b.js" as="script"><link rel="preload" href="/OcStar/assets/js/29.9bb1187b.js" as="script"><link rel="prefetch" href="/OcStar/assets/js/10.5a290036.js"><link rel="prefetch" href="/OcStar/assets/js/11.3e761738.js"><link rel="prefetch" href="/OcStar/assets/js/12.2340b856.js"><link rel="prefetch" href="/OcStar/assets/js/13.facfcd3d.js"><link rel="prefetch" href="/OcStar/assets/js/14.8cbc013a.js"><link rel="prefetch" href="/OcStar/assets/js/15.33db6b39.js"><link rel="prefetch" href="/OcStar/assets/js/16.47940fc2.js"><link rel="prefetch" href="/OcStar/assets/js/17.ef4d8cc7.js"><link rel="prefetch" href="/OcStar/assets/js/18.3256f17f.js"><link rel="prefetch" href="/OcStar/assets/js/19.a45744ea.js"><link rel="prefetch" href="/OcStar/assets/js/20.c22d9498.js"><link rel="prefetch" href="/OcStar/assets/js/21.30f352ed.js"><link rel="prefetch" href="/OcStar/assets/js/22.5ba155b7.js"><link rel="prefetch" href="/OcStar/assets/js/23.32f843d0.js"><link rel="prefetch" href="/OcStar/assets/js/24.493f4126.js"><link rel="prefetch" href="/OcStar/assets/js/25.ff1303a8.js"><link rel="prefetch" href="/OcStar/assets/js/26.00f909d9.js"><link rel="prefetch" href="/OcStar/assets/js/27.9c04a94d.js"><link rel="prefetch" href="/OcStar/assets/js/28.7067870a.js"><link rel="prefetch" href="/OcStar/assets/js/3.c33b3aaa.js"><link rel="prefetch" href="/OcStar/assets/js/30.ec6cb849.js"><link rel="prefetch" href="/OcStar/assets/js/31.762f4df1.js"><link rel="prefetch" href="/OcStar/assets/js/32.69b832ae.js"><link rel="prefetch" href="/OcStar/assets/js/33.a94ef9af.js"><link rel="prefetch" href="/OcStar/assets/js/34.38d4ab71.js"><link rel="prefetch" href="/OcStar/assets/js/35.0f4a405f.js"><link rel="prefetch" href="/OcStar/assets/js/36.272181a9.js"><link rel="prefetch" href="/OcStar/assets/js/37.bf02b0b9.js"><link rel="prefetch" href="/OcStar/assets/js/38.a40df493.js"><link rel="prefetch" href="/OcStar/assets/js/39.f82808c2.js"><link rel="prefetch" href="/OcStar/assets/js/4.0e092980.js"><link rel="prefetch" href="/OcStar/assets/js/40.c987821d.js"><link rel="prefetch" href="/OcStar/assets/js/41.47b3abce.js"><link rel="prefetch" href="/OcStar/assets/js/42.f3e54ea0.js"><link rel="prefetch" href="/OcStar/assets/js/43.719d8049.js"><link rel="prefetch" href="/OcStar/assets/js/44.cc806395.js"><link rel="prefetch" href="/OcStar/assets/js/45.354bb533.js"><link rel="prefetch" href="/OcStar/assets/js/46.a0e94547.js"><link rel="prefetch" href="/OcStar/assets/js/5.f0d08e09.js"><link rel="prefetch" href="/OcStar/assets/js/6.d9cff0ce.js"><link rel="prefetch" href="/OcStar/assets/js/7.a21ffd1b.js"><link rel="prefetch" href="/OcStar/assets/js/vendors~docsearch.271bc088.js">
+    <link rel="stylesheet" href="/OcStar/assets/css/0.styles.774ed4f6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/OcStar/" class="home-link router-link-active"><!----> <span class="site-name">OcStarDic</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/OcStar/" class="nav-link">
+  简介
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">快速入门</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">快速入门</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/" class="nav-link">
+  插件安装
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/create/" class="nav-link">
+  创建词库
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/type/" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/message/" class="nav-link">
+  认识消息方法
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/var/" class="nav-link">
+  变量赋值与取值
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ysvar/" class="nav-link">
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ifelse/" class="nav-link">
+  条件语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/for/" class="nav-link">
+  循环语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/try/" class="nav-link">
+  异常处理语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/method/" class="nav-link">
+  定义函数及调用
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/internal/" class="nav-link">
+  内部函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/class/" class="nav-link">
+  类与文件引用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">函数大全</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">函数大全</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/method/" class="nav-link">
+  api访问函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/properties/" class="nav-link">
+  键值文件函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/file/" class="nav-link">
+  txt文件读取写入
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/other/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">画图函数</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">画图函数</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/" class="nav-link router-link-active">
+  画布函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/paint/" class="nav-link">
+  画笔函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/matrix/" class="nav-link">
+  矩阵函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/path/" class="nav-link">
+  路径函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/pic/" class="nav-link">
+  快照跟路径样式
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/rect/" class="nav-link">
+  矩形对象
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/gdhs/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><a href="/OcStar/sec/" class="nav-link">
+  Sec框架函数
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/OcStar/" class="nav-link">
+  简介
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">快速入门</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">快速入门</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/" class="nav-link">
+  插件安装
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/create/" class="nav-link">
+  创建词库
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/type/" class="nav-link">
+  数据类型
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/message/" class="nav-link">
+  认识消息方法
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/var/" class="nav-link">
+  变量赋值与取值
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ysvar/" class="nav-link">
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/ifelse/" class="nav-link">
+  条件语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/for/" class="nav-link">
+  循环语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/try/" class="nav-link">
+  异常处理语句
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/method/" class="nav-link">
+  定义函数及调用
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/internal/" class="nav-link">
+  内部函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/ksrm/class/" class="nav-link">
+  类与文件引用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">函数大全</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">函数大全</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/method/" class="nav-link">
+  api访问函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/properties/" class="nav-link">
+  键值文件函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/file/" class="nav-link">
+  txt文件读取写入
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/method/other/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">画图函数</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">画图函数</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/" class="nav-link router-link-active">
+  画布函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/paint/" class="nav-link">
+  画笔函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/matrix/" class="nav-link">
+  矩阵函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/path/" class="nav-link">
+  路径函数
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/pic/" class="nav-link">
+  快照跟路径样式
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/rect/" class="nav-link">
+  矩形对象
+</a></li><li class="dropdown-item"><!----> <a href="/OcStar/drawimg/gdhs/" class="nav-link">
+  更多函数
+</a></li></ul></div></div><div class="nav-item"><a href="/OcStar/sec/" class="nav-link">
+  Sec框架函数
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p></p><div class="table-of-contents"><ul><li><a href="#创建对象">创建对象</a></li><li><a href="#new-路径">new 路径()</a></li><li><a href="#移动画笔">移动画笔</a></li><li><a href="#绘制直线">绘制直线</a></li><li><a href="#绘制贝塞尔曲线">绘制贝塞尔曲线</a></li><li><a href="#绘制圆弧">绘制圆弧</a></li><li><a href="#绘制椭圆">绘制椭圆</a></li><li><a href="#绘制-圆角矩形">绘制 圆角矩形</a></li><li><a href="#绘制-圆">绘制 圆</a></li><li><a href="#绘制-路径">绘制 路径</a></li><li><a href="#绘制op">绘制op</a></li><li><a href="#绘制闭合">绘制闭合</a></li><li><a href="#判断空">判断空</a></li><li><a href="#判断矩形">判断矩形</a></li><li><a href="#偏移">偏移</a></li><li><a href="#偏移incres">偏移incRes</a></li><li><a href="#矩阵">矩阵</a></li><li><a href="#重置点位">重置点位</a></li><li><a href="#reset">reset</a></li><li><a href="#rewind">rewind</a></li><li><a href="#填充模式">填充模式</a></li><li><a href="#获取填充模式">获取填充模式</a></li><li><a href="#判断填充模式">判断填充模式</a></li><li><a href="#切换填充模式">切换填充模式</a></li></ul></div><p></p> <h2 id="创建对象"><a href="#创建对象" class="header-anchor">#</a> 创建对象</h2> <h2 id="new-路径"><a href="#new-路径" class="header-anchor">#</a> new 路径()</h2> <h2 id="移动画笔"><a href="#移动画笔" class="header-anchor">#</a> 移动画笔</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$moveto,路径对象,x,y$
+
+路径对象.moveto(x,y)
+
+$rmoveto,路径对象,x,y$
+
+路径对象.rmoveto(x,y)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h2 id="绘制直线"><a href="#绘制直线" class="header-anchor">#</a> 绘制直线</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$lineto,路径对象,x,y$
+
+路径对象.lineto(x,y)
+
+$rlineto,路径对象,x,y$
+
+路径对象.rlineto(x,y)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h2 id="绘制贝塞尔曲线"><a href="#绘制贝塞尔曲线" class="header-anchor">#</a> 绘制贝塞尔曲线</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$quadto,路径对象,x1,y1,x2,y2$
+
+路径对象.quadto(x1,y1,x2,y2)
+
+$rquadto,路径对象,x1,y1,x2,y2$
+
+路径对象.rquadto(x1,y1,x2,y2)
+
+$cubicto,路径对象,x1,y1,x2,y2,x3,y3$
+
+路径对象.cubicto(x1,y1,x2,y2,x3,y3)
+
+$rcubicto,路径对象,x1,y1,x2,y2,x3,y3$
+
+路径对象.rcubicto(x1,y1,x2,y2,x3,y3)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><hr> <h2 id="绘制圆弧"><a href="#绘制圆弧" class="header-anchor">#</a> 绘制圆弧</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$arcto,路径对象,矩形对象,开始角度,顺时针测量的扫描角度,forceMoveTo布尔值$
+
+路径对象.arcto(矩形对象,开始角度,顺时针测量的扫描角度,forceMoveTo布尔值)
+
+$arcto,路径对象,左,上,右,下,开始角度,顺时针测量的扫描角度,forceMoveTo布尔值$
+
+路径对象.arcto(左,上,右,下,开始角度,顺时针测量的扫描角度,forceMoveTo布尔值)
+
+$arcto,路径对象,矩形对象,开始角度,顺时针测量的扫描角度$
+
+路径对象.arcto(矩形对象,开始角度,顺时针测量的扫描角度)
+
+$弧形,路径对象,矩形对象,开始角度,顺时针测量的扫描角度$
+
+路径对象.弧形(矩形对象,开始角度,顺时针测量的扫描角度)
+
+$弧形,路径对象,左,上,右,下,开始角度,顺时针测量的扫描角度$
+
+路径对象.弧形(左,上,右,下,开始角度,顺时针测量的扫描角度)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><hr> <h2 id="绘制椭圆"><a href="#绘制椭圆" class="header-anchor">#</a> 绘制椭圆</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$椭圆,路径对象,左,上,右,下,Path.Direction名字或对象$
+
+路径对象.椭圆(左,上,右,下,Path.Direction名字或对象)
+
+$椭圆,路径对象,矩形对象,Path.Direction名字或对象$
+
+路径对象.椭圆(矩形对象,Path.Direction名字或对象)
+
+Path.Direction名字:
+CW
+CCW
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h2 id="绘制-圆角矩形"><a href="#绘制-圆角矩形" class="header-anchor">#</a> 绘制 圆角矩形</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$圆角矩形,路径对象,矩形对象,圆角flost数组,Path.Direction名字或对象$
+
+路径对象.圆角矩形(圆角flost数组,Path.Direction名字或对象)
+
+$圆角矩形,路径对象,矩形对象,圆角x,圆角y,Path.Direction名字或对象$
+
+路径对象.圆角矩形(圆角x,圆角y,Path.Direction名字或对象)
+
+$圆角矩形,路径对象,左,上,右,下,圆角flost数组,Path.Direction名字或对象$
+
+路径对象.圆角矩形(左,上,右,下,圆角flost数组,Path.Direction名字或对象)
+
+$圆角矩形,路径对象,左,上,右,下,圆角x,圆角y,Path.Direction名字或对象$
+
+路径对象.圆角矩形(左,上,右,下,圆角x,圆角y,Path.Direction名字或对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><hr> <h2 id="绘制-圆"><a href="#绘制-圆" class="header-anchor">#</a> 绘制 圆</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$圆,路径对象,x,y,半径,Path.Direction名字或对象$
+
+路径对象.圆(x,y,半径,Path.Direction名字或对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="绘制-路径"><a href="#绘制-路径" class="header-anchor">#</a> 绘制 路径</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$路径,路径对象,路径对象1$
+
+路径对象.路径(路径对象1)
+
+$路径,路径对象,路径对象1,矩阵对象$
+
+路径对象.路径(路径对象1,矩阵对象)
+
+$路径,路径对象,路径对象1,x,y$
+
+路径对象.路径(路径对象1,x,y)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><hr> <h2 id="绘制op"><a href="#绘制op" class="header-anchor">#</a> 绘制op</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$op,路径对象,路径对象，Path.Op对象或名字$
+
+路径对象.op(路径对象，Path.Op对象或名字)
+
+$op,路径对象,路径对象1,路径对象2，Path.Op对象或名字$
+
+路径对象.op(路径对象1,路径对象2，Path.Op对象或名字)
+
+DIFFERENCE -- 减去Path2后Path1区域剩下的部分
+INTERSECT --- 保留Path2 和 Path1 共同的部分
+UNION -- 保留Path1 和 Path 2
+XOR --- 保留Path1 和 Path2 去除共同的部分
+REVERSE_DIFFERENCE --- 减去Path1后Path2区域剩下的部分
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><hr> <h2 id="绘制闭合"><a href="#绘制闭合" class="header-anchor">#</a> 绘制闭合</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$close,路径对象$
+
+路径对象.close()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="判断空"><a href="#判断空" class="header-anchor">#</a> 判断空</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$判断空,路径对象$
+
+路径对象.判断空()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="判断矩形"><a href="#判断矩形" class="header-anchor">#</a> 判断矩形</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$判断矩形,路径对象,矩形对象$
+
+路径对象.判断矩形(矩形对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="偏移"><a href="#偏移" class="header-anchor">#</a> 偏移</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$偏移,路径对象,x,y$
+
+路径对象.偏移(矩形对象)
+
+$偏移,路径对象,x,y,路径对象$
+
+路径对象.偏移(x,y,路径对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h2 id="偏移incres"><a href="#偏移incres" class="header-anchor">#</a> 偏移incRes</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$incRes,路径对象,extraPtCount$
+
+路径对象.incRes(extraPtCount)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="矩阵"><a href="#矩阵" class="header-anchor">#</a> 矩阵</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$矩阵,路径对象,矩阵对象$
+
+路径对象.矩阵(矩阵对象)
+
+$矩阵,路径对象,矩阵对象,路径对象$
+
+路径对象.矩阵(矩阵对象,路径对象)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h2 id="重置点位"><a href="#重置点位" class="header-anchor">#</a> 重置点位</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$重置点位,路径对象,dx,dy$
+
+路径对象.重置点位(dx,dy)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="reset"><a href="#reset" class="header-anchor">#</a> reset</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$reset,路径对象$
+
+路径对象.reset()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="rewind"><a href="#rewind" class="header-anchor">#</a> rewind</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$rewind,路径对象$
+
+路径对象.rewind()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="填充模式"><a href="#填充模式" class="header-anchor">#</a> 填充模式</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$填充模式,路径对象,Path.FillType$
+
+路径对象.填充模式()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="获取填充模式"><a href="#获取填充模式" class="header-anchor">#</a> 获取填充模式</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$获取填充模式,路径对象$
+
+路径对象.获取填充模式()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="判断填充模式"><a href="#判断填充模式" class="header-anchor">#</a> 判断填充模式</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$判断填充模式,路径对象$
+
+路径对象.判断填充模式()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr> <h2 id="切换填充模式"><a href="#切换填充模式" class="header-anchor">#</a> 切换填充模式</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$切换填充模式,路径对象$
+
+路径对象.切换填充模式()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><hr></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/OcStar/drawimg/path.html" aria-current="page" class="prev router-link-exact-active router-link-active">
+        路径函数
+      </a></span> <span class="next"><a href="/OcStar/drawimg/pic.html">
+        快照跟路径样式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/OcStar/assets/js/app.f089a547.js" defer></script><script src="/OcStar/assets/js/2.56b203c4.js" defer></script><script src="/OcStar/assets/js/1.aca73b7b.js" defer></script><script src="/OcStar/assets/js/29.9bb1187b.js" defer></script>
+  </body>
+</html>
